@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tp IONIC</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+    <ion-app>
+        <ion-header translucent>
+            <ion-toolbar>
+                <ion-title>Employees Page</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content fullscreen>
+            <!-- <form onsubmit="processForm(event)"> -->
+            <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+                <ion-item>
+                    <ion-label position="floating">Name</ion-label>
+                    <ion-input id="FirstName"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Age</ion-label>
+                    <ion-input id="Age"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Salary</ion-label>
+                    <ion-input id="Salary"></ion-input>
+                </ion-item>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <div>
+                                <ion-list>
+                                    <ion-item>
+                                        <ion-label>Salaries</ion-label>
+                                        <ion-note id="TotSalaries" slot="end" color="primary">99 </ion-note>
+                                    </ion-item>
+                                </ion-list>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-list>
+                                    <ion-item>
+                                        <ion-label>Employees</ion-label>
+                                        <ion-note slot="end" id="TotEmployees" color="secondary">99 </ion-note>
+                                    </ion-item>
+                                </ion-list>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <div class="ion-padding">
+                                <ion-button id="mybtn1" expand="block" type="submit" class="ion-no-margin"
+                                    color="success">Create</ion-button>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+
+                            <div class="ion-padding">
+                                <ion-button id="mybtn2" expand="block" type="submit" class="ion-no-margin"
+                                    color="danger">Reset</ion-button>
+                            </div>
+
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+
+            </ion-list>
+            <ion-list id="List" lines="full" class="ion-no-margin ion-no-padding">
+
+
+            </ion-list>
+
+
+
+            <ion-alert-controller></ion-alert-controller>
+            <ion-modal-controller id="ion-modal"></ion-modal-controller>
+
+            <!-- </form> -->
+        </ion-content>
+    </ion-app>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
