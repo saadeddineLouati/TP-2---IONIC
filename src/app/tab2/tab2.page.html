@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Liste des Contact
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let Contact of ConatactArray">
+
+      <ion-avatar slot="start">
+        <img src="https://www.nretnil.com/avatar/LawrenceEzekielAmos.png">
+      </ion-avatar>
+      <ion-label>
+
+        <h2>{{ Contact.nom }}</h2>
+        <h3>{{ Contact.email }}</h3>
+
+        <ion-button size="small" color="warning" (click)='details(Contact.id)'>
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </ion-button>
+        <ion-button size="small" color="primary" (click)='openModal(Contact)'>
+          <ion-icon name='create'></ion-icon>
+        </ion-button>
+        <ion-button size="small" color="danger" (click)='delete(Contact)'>
+          <ion-icon name='trash'></ion-icon>
+        </ion-button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

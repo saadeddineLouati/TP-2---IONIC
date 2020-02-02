@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="modifierContact()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input #nom_contact="ngModel" [(ngModel)]="editContact.nom" name="nom_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="stacked">Prenom</ion-label>
+        <ion-input #prenom_contact="ngModel" [(ngModel)]="editContact.prenom" name="prenom_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Age</ion-label>
+        <ion-input #age_contact="ngModel" [(ngModel)]="editContact.age" name="age_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input #email_contact="ngModel" [(ngModel)]="editContact.email" name="email_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Poste</ion-label>
+        <ion-input #poste_contact="ngModel" [(ngModel)]="editContact.poste" name="poste_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Salaire</ion-label>
+        <ion-input #salaire_contact="ngModel" [(ngModel)]="editContact.salaire" name="salaire_contact" type="text">
+        </ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <ion-row class="signin">
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">Modifier Contact
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
